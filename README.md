@@ -1,21 +1,34 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 # pomodoro-timer
-Site pomodoro para estudar feito em react vite, express e mongodb.
->>>>>>> 72aaaf65515d2ac8e9643fefd885c0b8b8f668fc
+
+Projeto de um timer pomodoro pra estudos, que quanto mais usa, mais sobe o level.  
+Feito em React com Vite e TailwindCSS.
+
+O projeto conta com a página principal que contém o timer, e também uma página de registro e uma de login.
+
+## Funcionalidades
+
+- Timer pomodoro para foco nos estudos
+- Sistema de level que sobe conforme o uso
+- Página de registro de usuário
+- Página de login
+- Integração com API em Node.js
+- Autenticação utilizando JWT
+
+## Tecnologias usadas
+
+- React
+- Vite
+- TailwindCSS
+- React Router
+- Fetch API
+
+## Estrutura do projeto
+
+- Página principal com o timer
+- Página de registro
+- Página de login
+- Rotas protegidas para usuários autenticados
+
+## Observações
+
+A aplicação se conecta com uma API em Node.js que utiliza MongoDB Atlas para armazenar os dados dos usuários e do timer.
