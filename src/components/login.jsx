@@ -5,11 +5,12 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
-  const navigate = useNavigate(); // Declarando a nossa biblioteca para uma variável
+  const navigate = useNavigate();
+  const url = "https://node-api-pomodoro-timer.onrender.com";
 
   function Submit(e) {
     e.preventDefault(); // Impede o recarregamento da página
-    fetch("http://localhost:8080/login", {
+    fetch(`${url}/login`, {
       // Conectando ao site onde está o banco de dados
       method: "POST",
       headers: {
@@ -25,7 +26,7 @@ function Login() {
         // Aqui trabalha com os dados json da response
         if (data.mensagem === "Logado") {
           localStorage.setItem("token", data.token);
-          navigate("/main");
+          navigate("/");
         } else {
           setResponse(data.mensagem);
         }

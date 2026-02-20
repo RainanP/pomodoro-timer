@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom"; // Aqui estou importando o "ro
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // Aqui em baixo nós usaremos este comando que vai criar o sistema de rotas, que vai ser criado em base no nosso App
-  <BrowserRouter>
+  <BrowserRouter basename="/pomodoro-timer">
     <App />
   </BrowserRouter>,
 );

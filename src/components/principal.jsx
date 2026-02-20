@@ -12,13 +12,24 @@ function Principal() {
   const [progresso, setProgesso] = useState(0);
   const [estado, setEstado] = useState(true);
   const [start, setStart] = useState(false);
+  const [servidor, setServidor] = useState(true);
   const token = localStorage.getItem("token");
+  const url = "https://node-api-pomodoro-timer.onrender.com";
+
+  // Espera carregar o servidor
+
+  useEffect(() => {
+    fetch(`${url}/`)
+      .then((res) => res.json())
+      .then(() => setServidor(false))
+      .catch(() => setServidor(false));
+  }, []);
 
   // ── Alterna entre foco e descanso ao fim do timer ────────
   function reiniciar() {
     if (timer <= 0) {
       if (estado == true) {
-        fetch("http://localhost:8080/datatime", {
+        fetch(`${url}/datatime`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +50,7 @@ function Principal() {
             }
           });
       } else {
-        fetch("http://localhost:8080/verifycronos", {
+        fetch(`${url}/verifycronos`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +76,7 @@ function Principal() {
 
   // Trazer o level do backend para o frontend
   useEffect(() => {
-    fetch("http://localhost:8080/level", {
+    fetch(`${url}/level`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -111,7 +122,7 @@ function Principal() {
 
   // ── Inicia o timer e registra no banco de dados ──────────
   function iniciar() {
-    fetch("http://localhost:8080/datatime", {
+    fetch(`${url}/datatime`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -152,6 +163,13 @@ function Principal() {
 
   // ── Render ───────────────────────────────────────────────
   return (
+  <>
+    {servidor ? (
+      <div style={{ textAlign: "center", marginTop: "100px" }}>
+        <h2>Iniciando servidor...</h2>
+        <p>Isso pode levar alguns segundos ☁️</p>
+      </div>
+    ) :  (
     <div className="min-h-screen relative flex flex-col items-center">
       {/* Aviso de usuário não logado */}
       {VarLogar && (
@@ -235,6 +253,5 @@ function Principal() {
         </div>
       </div>
     </div>
-  );
-}
+  )} </> )};
 export default Principal;

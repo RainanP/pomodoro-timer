@@ -7,10 +7,11 @@ function Register() {
   const [rePassword, setRePassword] = useState("");
   const [response, setResponse] = useState("");
   const navigate = useNavigate(); // Declarando a nossa biblioteca para uma variável
+  const url = "https://node-api-pomodoro-timer.onrender.com";
 
   function Submit(e) {
     e.preventDefault(); // Impede o recarregamento da página
-    fetch("http://localhost:8080/registro", {
+    fetch(`${url}/registro`, {
       // Conectando ao site onde está o banco de dados
       method: "POST",
       headers: {
@@ -27,7 +28,7 @@ function Register() {
         setResponse(data["mensagem"]);
         if(data.mensagem == "Registrado com sucesso!"){
           localStorage.setItem("token", data.token);
-          navigate("/main"); // Troca de página
+          navigate("/"); // Troca de página
         }
       })
       .catch((error) => {
