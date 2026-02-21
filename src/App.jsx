@@ -7,12 +7,13 @@ import { Route, Routes } from 'react-router-dom'; // Biblioteca que vai nos perm
 
 function App() {
   return (
-    // Criando nossas rotas
-    <Routes>
-      <Route path='/login' element={<Login />} />
-      <Route path='/registro' element={<Register />} />
-      <Route path='/' element={<Principal />} />
-    </Routes>
+    <div className="min-h-screen bg-white text-black">
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='/registro' element={<Register />} />
+        <Route path='/' element={<Principal />} />
+      </Routes>
+    </div>
   )
 }
 
