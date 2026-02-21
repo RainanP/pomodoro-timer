@@ -5,10 +5,10 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
 
-  --text-color: #213547; /* cor padrão */
-  --bg-color: #ffffff;   /* fundo padrão */
+  --text-color: #213547;
+  --bg-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,14 +21,14 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: rgba(255, 255, 255, 0.87);
-    --bg-color: #242424;
+    --text-color: #213547;
+    --bg-color: #ffffff;
   }
 }
 
