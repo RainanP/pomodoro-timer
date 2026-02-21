@@ -18,6 +18,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #213547 !important;
+  background-color: SUA_COR_AQUI !important;
 }
 
 body {
