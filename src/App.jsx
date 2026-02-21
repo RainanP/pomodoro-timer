@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom'; // Biblioteca que vai nos perm
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div style={{color: 'black'}}>
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/registro' element={<Register />} />
