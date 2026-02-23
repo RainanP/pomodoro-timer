@@ -5,7 +5,7 @@
 }
 
 html, body {
-  background-color: #ffffff !important;
+  background-color: bisque;
 }
 
 :root {
@@ -18,7 +18,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #213547 !important;
-  background-color: #FFF3E0 !important;
+  background-color: bisque;
 }
 
 body {
@@ -27,6 +27,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: black;
+  background-color: bisque;
 }
 
 a {
