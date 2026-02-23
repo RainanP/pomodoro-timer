@@ -167,7 +167,7 @@ function Principal() {
     {servidor ? (
       <div style={{ textAlign: "center", marginTop: "100px" }}>
         <h2>Iniciando servidor...</h2>
-        <p>Isso pode levar alguns segundos ☁️</p>
+        <p>Isso pode levar alguns segundos</p>
       </div>
     ) :  (
     <div className="min-h-screen relative flex flex-col items-center">
